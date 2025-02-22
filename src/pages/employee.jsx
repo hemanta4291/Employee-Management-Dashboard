@@ -12,6 +12,8 @@ import TitleWithBreadcrumb from "@/components/title-with-breadcrumb";
 import { Grid, List, LoaderIcon, Plus } from "lucide-react";
 import EmployeeDialog from "@/components/employee-dialog";
 import { useGetEmployeesQuery } from "@/features/employeesApi";
+import LayoutLoader from "@/components/layout-loader";
+import LayoutError from "@/components/layout-error";
 
 const Employee = () => {
   const { data, error, isLoading } = useGetEmployeesQuery(null);
@@ -24,15 +26,15 @@ const Employee = () => {
 
   if (isLoading)
     return (
-      <p className="flex justify-center items-center pt-40">
-        <LoaderIcon size={100} className=" animate-spin " />
-      </p>
+      <LayoutLoader>
+        <LoaderIcon size={50} className=" animate-spin " />
+      </LayoutLoader>
     );
   if (error)
     return (
-      <p className="flex justify-center items-center pt-40">
-        Error fetching users
-      </p>
+      <LayoutError>
+        <p>Error fetching users</p>
+      </LayoutError>
     );
 
   return (

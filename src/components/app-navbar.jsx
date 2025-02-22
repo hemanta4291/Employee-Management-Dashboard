@@ -14,6 +14,7 @@ import { Menu } from "lucide-react";
 
 const AppNavbar = () => {
   const { open, toggleSidebar } = useSidebar();
+
   return (
     <div
       className={`${

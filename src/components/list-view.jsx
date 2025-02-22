@@ -275,7 +275,7 @@ const ListView = ({ data }) => {
                             <Trash size="18" />
                           </Button>
                         </AlertDialogTrigger>
-                        <AlertDialogContent>
+                        <AlertDialogContent className="max-w-[310px] sm:max-w-xl">
                           <AlertDialogHeader>
                             <AlertDialogTitle>
                               Are you absolutely sure?
@@ -347,7 +347,7 @@ const ListView = ({ data }) => {
       <LoadingBar
         color="#ef4444"
         progress={progress}
-        height={5}
+        height={2}
         onLoaderFinished={() => setProgress(0)}
       />
     </div>

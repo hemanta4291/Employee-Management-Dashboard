@@ -80,7 +80,7 @@ const EmployeeDialog = ({
             </Button>
           )}
         </DialogTrigger>
-        <DialogContent>
+        <DialogContent className="max-w-[310px] sm:max-w-xl">
           <DialogHeader>
             <DialogTitle>
               {employee ? "Edit Employee" : "Add Employee"}
@@ -95,7 +95,7 @@ const EmployeeDialog = ({
       </Dialog>
       <LoadingBar
         color="#22c55e"
-        height={5}
+        height={2}
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
       />

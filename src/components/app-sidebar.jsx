@@ -16,6 +16,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import Logo from "@/assets/logo.png";
 import LightLogo from "@/assets/logo.jpg";
 import { useTheme } from "./theme-provider";
+import { useEffect } from "react";
 
 // Menu items.
 const items = [
@@ -49,6 +50,11 @@ export function AppSidebar() {
   const location = useLocation();
   const { open } = useSidebar();
   const { theme } = useTheme();
+  const { setOpenMobile } = useSidebar();
+
+  useEffect(() => {
+    setOpenMobile(false);
+  }, [location.pathname, setOpenMobile]);
 
   return (
     <Sidebar collapsible="icon" className="z-[5]">

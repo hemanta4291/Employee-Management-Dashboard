@@ -63,7 +63,7 @@ const GirdView = ({ data }) => {
           </Avatar>
           <div className="absolute right-4 top-4 flex flex-col gap-2">
             <Button
-              className="w-7 h-7 p-0 bg-white text-gray-950 border border-gray-400 hover:text-white transition-all duration-300"
+              className="w-7 h-7 p-0 bg-white text-gray-950 border border-gray-400 hover:bg-blue-500 hover:border-blue-500 hover:text-white transition-all duration-300"
               onClick={() => editEmployee(employee)}>
               <Edit size="18" />
             </Button>
@@ -73,7 +73,7 @@ const GirdView = ({ data }) => {
                   <Trash size="18" />
                 </Button>
               </AlertDialogTrigger>
-              <AlertDialogContent>
+              <AlertDialogContent className="max-w-[310px] sm:max-w-xl">
                 <AlertDialogHeader>
                   <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
                   <AlertDialogDescription>
@@ -121,7 +121,7 @@ const GirdView = ({ data }) => {
 
       <LoadingBar
         color="#ef4444"
-        height={5}
+        height={2}
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
       />

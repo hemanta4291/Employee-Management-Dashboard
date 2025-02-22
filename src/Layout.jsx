@@ -22,7 +22,7 @@ export default function Layout() {
       <AppSidebar />
       <div className="w-full">
         <AppNavbar />
-        <main className="px-4 py-24">
+        <main className="px-4 pt-24 pb-14">
           <AppRouter />
         </main>
       </div>
